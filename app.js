@@ -1,25 +1,32 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-var printedNumber = 1;
+ 	var finalnumber = prompt("Please enter a number:");
+	var parsed = parseInt(finalnumber, 10);	
 
-for (var printedNumber = 1; printedNumber <= 100; printedNumber++) {
 
-		if (printedNumber % 15 === 0){
-  		$(".container").append("<li>fizzbuzz</li>");
-		}
+function counter(){
 
-  		else if (printedNumber % 3 === 0){
-  		$(".container").append("<li>fizz</li>");
-		}
+	var printedNumber = 1;
 
- 		else if (printedNumber % 5 === 0){
-	   	$(".container").append("<li>buzz</li>");
-		}
+	for (var printedNumber = 1; printedNumber <= parsed; printedNumber++) {
 
-		else {
-		$(".container").append("<li>" +  printedNumber + "</li>");
+		if (printedNumber % 15 === 0) {
+			$(".container").append("<li>fizzbuzz</li>");
+		} else if (printedNumber % 3 === 0) {
+			$(".container").append("<li>fizz</li>");
+		} else if (printedNumber % 5 === 0) {
+			$(".container").append("<li>buzz</li>");
+		} else {
+			$(".container").append("<li>" + printedNumber + "</li>");
 		}
 
 	};
+}
 
-});
+counter('parsed');
+
+
+
+
+
+	})
